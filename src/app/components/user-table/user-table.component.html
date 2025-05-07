@@ -20,12 +20,12 @@
             <tbody>
                 <tr *ngFor="let user of users 
                 | search:nameSearch:'name' 
-                | search:companySearch:'company_name'
-                | search:designationSearch:'designation'">
+                | search:companySearch:'company.name'
+                | search:designationSearch:'company.designation'">
                     <td> {{ user.name }} <br>
                     {{ user.email }}</td>
-                    <td>{{ user.company_name }}</td>
-                    <td>{{ user.designation }}</td>
+                    <td>{{ user.company.name }}</td>
+                    <td>{{ user.company.designation }}</td>
                 </tr>
             </tbody>
         </table>
